@@ -9,23 +9,23 @@
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  --bg:      #0c0c0c;
-  --bg2:     #121212;
-  --bg3:     #1a1a1a;
-  --border:  #232323;
+  --bg: #0c0c0c;
+  --bg2: #121212;
+  --bg3: #1a1a1a;
+  --border: #232323;
   --grey-dk: #333;
-  --grey:    #666;
+  --grey: #666;
   --grey-md: #888;
   --grey-lt: #bbb;
   --offwhite:#e6e6e6;
-  --white:   #f5f5f5;
-  --pure:    #fff;
-  --green:   #4ade80;
-  --red:     #f87171;
-  --yellow:  #facc15;
+  --white: #f5f5f5;
+  --pure: #fff;
+  --green: #4ade80;
+  --red: #f87171;
+  --yellow: #facc15;
   --display: 'Syne', sans-serif;
-  --mono:    'DM Mono', monospace;
-  --serif:   'Instrument Serif', serif;
+  --mono: 'DM Mono', monospace;
+  --serif: 'Instrument Serif', serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -77,12 +77,10 @@ body::after {
 .live-dot { width:5px; height:5px; background: var(--green); border-radius:50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
 
-
-
 .t-item { display:inline-flex; align-items:baseline; gap:7px; flex-shrink:0; }
 .t-name { font-family:var(--mono); font-size:.58rem; letter-spacing:.12em; color:var(--grey); }
-.t-val  { font-family:var(--mono); font-size:.7rem; font-weight:500; color:var(--white); }
-.t-chg  { font-family:var(--mono); font-size:.62rem; }
+.t-val { font-family:var(--mono); font-size:.7rem; font-weight:500; color:var(--white); }
+.t-chg { font-family:var(--mono); font-size:.62rem; }
 .t-chg.up { color:var(--green); }
 .t-chg.dn { color:var(--red); }
 .t-chg.fl { color:var(--grey); }
@@ -243,27 +241,27 @@ body::after {
 .ind-lbl { font-family:var(--mono); font-size:.5rem; letter-spacing:.1em; color:var(--grey); text-transform:uppercase; margin-bottom:7px; }
 .ind-val { font-family:var(--display); font-size:1.1rem; font-weight:800; color:var(--white); letter-spacing:-0.01em; }
 .ind-val.good { color:var(--green); }
-.ind-val.bad  { color:var(--red); }
+.ind-val.bad { color:var(--red); }
 .ind-val.warn { color:var(--yellow); }
 .ind-sub { font-family:var(--mono); font-size:.5rem; color:var(--grey); margin-top:4px; }
 
 .score-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:20px; }
 .score-top { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px; }
 .score-name { font-family:var(--mono); font-size:.58rem; letter-spacing:.1em; color:var(--grey); text-transform:uppercase; }
-.score-num  { font-family:var(--display); font-size:1.05rem; font-weight:800; color:var(--white); }
+.score-num { font-family:var(--display); font-size:1.05rem; font-weight:800; color:var(--white); }
 .score-track { height:2px; background:var(--bg3); border-radius:2px; overflow:hidden; }
-.score-fill  { height:100%; border-radius:2px; transition:width 1.2s cubic-bezier(.4,0,.2,1); }
+.score-fill { height:100%; border-radius:2px; transition:width 1.2s cubic-bezier(.4,0,.2,1); }
 
 .iv-row { display:flex; gap:16px; flex-wrap:wrap; }
 .iv-box { flex:1; min-width:150px; background:var(--bg); border:1px solid var(--border); border-radius:2px; padding:16px 20px; }
 .iv-lbl { font-family:var(--mono); font-size:.52rem; letter-spacing:.14em; color:var(--grey); text-transform:uppercase; margin-bottom:8px; }
 .iv-val { font-family:var(--display); font-size:1.5rem; font-weight:800; letter-spacing:-0.02em; color:var(--white); }
 .iv-val.good { color:var(--green); }
-.iv-val.bad  { color:var(--red); }
+.iv-val.bad { color:var(--red); }
 .iv-sub { font-family:var(--mono); font-size:.52rem; color:var(--grey); margin-top:5px; }
 
-.ai-text  { font-family:var(--serif); font-size:1.05rem; line-height:1.8; color:var(--offwhite); margin-bottom:16px; }
-.ai-strat { font-family:var(--mono); font-size:.75rem; line-height:1.75; color:var(--grey-lt); border-left:2px solid var(--grey-dk); padding:14px 18px; background:var(--bg); border-radius:0 2px 2px 0; }
+.ai-text { font-family:var(--serif); font-size:1.05rem; line-height:1.8; color:var(--offwhite); margin-bottom:16px; }
+.ai-strat { font-family:var(--serif); font-size:.75rem; line-height:1.75; color:var(--grey-lt); border-left:2px solid var(--grey-dk); padding:14px 18px; background:var(--bg); border-radius:0 2px 2px 0; }
 
 .pts-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
 @media(max-width:600px){ .pts-grid { grid-template-columns:1fr; } }
@@ -279,8 +277,8 @@ body::after {
 
 .verdict-row { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
 .verdict-badge { font-family:var(--display); font-size:.72rem; font-weight:800; letter-spacing:.14em; padding:10px 26px; border-radius:2px; white-space:nowrap; }
-.verdict-badge.comprar { background:rgba(74,222,128,.1);  color:var(--green);  border:1px solid rgba(74,222,128,.22); }
-.verdict-badge.vender  { background:rgba(248,113,113,.1); color:var(--red);    border:1px solid rgba(248,113,113,.22); }
+.verdict-badge.comprar { background:rgba(74,222,128,.1); color:var(--green); border:1px solid rgba(74,222,128,.22); }
+.verdict-badge.vender { background:rgba(248,113,113,.1); color:var(--red); border:1px solid rgba(248,113,113,.22); }
 .verdict-badge.aguardar{ background:rgba(250,204,21,.07); color:var(--yellow); border:1px solid rgba(250,204,21,.2); }
 .verdict-txt { font-family:var(--serif); font-style:italic; font-size:1rem; color:var(--grey-md); flex:1; }
 
@@ -290,11 +288,11 @@ body::after {
 .chat-history { height:300px; overflow-y:auto; padding:24px; display:flex; flex-direction:column; gap:14px; scrollbar-width:thin; scrollbar-color:var(--bg3) transparent; }
 .msg { max-width:78%; animation:fadeIn .25s ease; }
 .msg.user { align-self:flex-end; }
-.msg.ai   { align-self:flex-start; }
-.msg-who  { font-family:var(--mono); font-size:.52rem; letter-spacing:.1em; color:var(--grey); margin-bottom:5px; text-transform:uppercase; }
+.msg.ai { align-self:flex-start; }
+.msg-who { font-family:var(--mono); font-size:.52rem; letter-spacing:.1em; color:var(--grey); margin-bottom:5px; text-transform:uppercase; }
 .msg-body { font-family:var(--serif); font-size:.95rem; line-height:1.6; padding:12px 16px; border-radius:2px; }
 .msg.user .msg-body { background:var(--bg3); border:1px solid var(--border); color:var(--white); font-style:italic; }
-.msg.ai   .msg-body { background:var(--bg);  border:1px solid var(--border); color:var(--offwhite); }
+.msg.ai .msg-body { background:var(--bg); border:1px solid var(--border); color:var(--offwhite); }
 .chat-foot { border-top:1px solid var(--border); display:flex; }
 .chat-foot input { flex:1; background:var(--bg); border:none; color:var(--white); font-family:var(--serif); font-style:italic; font-size:.95rem; padding:15px 20px; outline:none; }
 .chat-foot input::placeholder { color:var(--grey-dk); }
@@ -302,9 +300,52 @@ body::after {
 .btn-send:hover { background:var(--offwhite); }
 
 /* FOOTER */
-.footer { border-top:1px solid var(--border); padding:20px clamp(16px,4vw,52px); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-.foot-logo { font-family:var(--display); font-size:.8rem; font-weight:800; color:var(--grey-dk); letter-spacing:-0.01em; }
-.foot-disc { font-family:var(--mono); font-size:.55rem; color:var(--grey-dk); letter-spacing:.04em; max-width:550px; text-align:right; }
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 40px clamp(16px,4vw,52px) 32px;
+}
+.footer-main {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 32px; margin-bottom: 32px;
+}
+.foot-logo { font-family:var(--display); font-size:.8rem; font-weight:800; color:var(--grey-dk); letter-spacing:-0.01em; margin-bottom: 8px; }
+.foot-disc { font-family:var(--mono); font-size:.55rem; color:var(--grey-dk); letter-spacing:.04em; max-width:400px; line-height: 1.7; }
+
+/* CONTACT & PIX */
+.footer-cards { display: flex; gap: 16px; flex-wrap: wrap; }
+.foot-card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 3px;
+  padding: 18px 22px; min-width: 220px;
+}
+.foot-card-label {
+  font-family: var(--mono); font-size: .5rem; letter-spacing: .2em;
+  color: var(--grey); text-transform: uppercase; margin-bottom: 10px;
+}
+.foot-card-value {
+  font-family: var(--mono); font-size: .75rem; color: var(--white);
+  letter-spacing: .02em;
+}
+.foot-card-value a { color: var(--white); text-decoration: none; border-bottom: 1px solid var(--grey-dk); padding-bottom: 1px; transition: border-color .15s, color .15s; }
+.foot-card-value a:hover { color: var(--pure); border-color: var(--grey); }
+
+.pix-key {
+  font-family: var(--mono); font-size: .62rem; color: var(--grey-lt);
+  letter-spacing: .03em; word-break: break-all; line-height: 1.6;
+}
+.pix-copy-btn {
+  margin-top: 10px; background: transparent; border: 1px solid var(--border);
+  color: var(--grey); font-family: var(--mono); font-size: .52rem;
+  letter-spacing: .1em; padding: 5px 12px; border-radius: 2px; cursor: pointer;
+  transition: all .15s;
+}
+.pix-copy-btn:hover { background: var(--bg3); color: var(--white); border-color: var(--grey-dk); }
+.pix-copy-btn.copied { color: var(--green); border-color: rgba(74,222,128,.3); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border); padding-top: 20px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+}
+.foot-copy { font-family: var(--mono); font-size: .52rem; color: var(--grey-dk); letter-spacing: .06em; }
 </style>
 </head>
 <body>
@@ -318,7 +359,6 @@ body::after {
     </div>
   </div>
 </header>
-
 
 <div class="hero">
   <div class="hero-left">
@@ -419,23 +459,49 @@ body::after {
 </div>
 
 <footer class="footer">
-  <span class="foot-logo">Finance Time</span>
-  <span class="foot-disc">⚠ Fins educacionais. Não constitui recomendação de investimento. Consulte um profissional certificado. Dados via Yahoo Finance.</span>
+  <div class="footer-main">
+    <div>
+      <div class="foot-logo">Finance Time</div>
+      <p class="foot-disc">⚠ Fins educacionais. Não constitui recomendação de investimento. Consulte um profissional certificado. Dados via Yahoo Finance.</p>
+    </div>
+
+    <div class="footer-cards">
+      <!-- Contato Comercial -->
+      <div class="foot-card">
+        <div class="foot-card-label">Contato Comercial</div>
+        <div class="foot-card-value">
+          <a href="mailto:julioeconomia66@gmail.com">julioeconomia66@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- PIX -->
+      <div class="foot-card">
+        <div class="foot-card-label">☕ Ajude os Devs — Pix</div>
+        <div class="pix-key" id="pixKey">df2df4e3-867f-4280-9371-680d6b6bdc7b</div>
+        <button class="pix-copy-btn" id="pixBtn" onclick="copyPix()">COPIAR CHAVE</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="foot-copy">© 2026 Finance Time · Todos os direitos reservados</span>
+    <span class="foot-copy">Feito com ☕ e muito código</span>
+  </div>
 </footer>
 
 <script>
 // ── Investors ────────────────────────────────────────
 const INVESTORS = [
-  { id:'graham',     name:'Benjamin Graham',  style:'Valor / Margem de Segurança' },
-  { id:'barsi',      name:'Luiz Barsi',        style:'Dividendos / Previdência' },
-  { id:'buffett',    name:'Warren Buffett',    style:'Moat / Vantagem Competitiva' },
-  { id:'lynch',      name:'Peter Lynch',       style:'GARP / PEG Ratio' },
-  { id:'dalio',      name:'Ray Dalio',         style:'Macro / All-Weather' },
-  { id:'munger',     name:'Charlie Munger',    style:'Qualidade a Preço Justo' },
-  { id:'greenblatt', name:'Joel Greenblatt',   style:'Magic Formula' },
-  { id:'marks',      name:'Howard Marks',      style:'Gestão de Risco / Ciclos' },
-  { id:'templeton',  name:'John Templeton',    style:'Contrarian / Global' },
-  { id:'wood',       name:'Cathie Wood',       style:'Inovação / Disruptivo' },
+  { id:'graham', name:'Benjamin Graham', style:'Valor / Margem de Segurança' },
+  { id:'barsi', name:'Luiz Barsi', style:'Dividendos / Previdência' },
+  { id:'buffett', name:'Warren Buffett', style:'Moat / Vantagem Competitiva' },
+  { id:'lynch', name:'Peter Lynch', style:'GARP / PEG Ratio' },
+  { id:'dalio', name:'Ray Dalio', style:'Macro / All-Weather' },
+  { id:'munger', name:'Charlie Munger', style:'Qualidade a Preço Justo' },
+  { id:'greenblatt', name:'Joel Greenblatt', style:'Magic Formula' },
+  { id:'marks', name:'Howard Marks', style:'Gestão de Risco / Ciclos' },
+  { id:'templeton', name:'John Templeton', style:'Contrarian / Global' },
+  { id:'wood', name:'Cathie Wood', style:'Inovação / Disruptivo' },
 ];
 
 const invGrid = document.getElementById('invGrid');
@@ -452,7 +518,16 @@ INVESTORS.forEach(inv => {
   invGrid.appendChild(d);
 });
 
-
+// ── Pix Copy ─────────────────────────────────────────
+function copyPix() {
+  const key = document.getElementById('pixKey').textContent;
+  navigator.clipboard.writeText(key).then(() => {
+    const btn = document.getElementById('pixBtn');
+    btn.textContent = '✓ COPIADO!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'COPIAR CHAVE'; btn.classList.remove('copied'); }, 2000);
+  });
+}
 
 // ── Clock ────────────────────────────────────────────
 setInterval(() => {
@@ -461,16 +536,16 @@ setInterval(() => {
 document.getElementById('liveClock').textContent = new Date().toLocaleTimeString('pt-BR');
 
 // ── Utils ────────────────────────────────────────────
-const fmt    = v => (v !== null && v !== undefined && !isNaN(v)) ? Number(v).toFixed(2) : '—';
+const fmt = v => (v !== null && v !== undefined && !isNaN(v)) ? Number(v).toFixed(2) : '—';
 const fmtBig = v => { if(!v)return'—'; if(v>=1e12)return(v/1e12).toFixed(1)+'T'; if(v>=1e9)return(v/1e9).toFixed(1)+'B'; if(v>=1e6)return(v/1e6).toFixed(1)+'M'; return Number(v).toFixed(0); };
-const pick   = t => { document.getElementById('tickerInput').value = t; };
+const pick = t => { document.getElementById('tickerInput').value = t; };
 const showErr = msg => { const el = document.getElementById('errBox'); el.textContent = '⚠ ' + msg; el.classList.add('show'); };
 
 document.getElementById('tickerInput').addEventListener('keydown', e => { if(e.key==='Enter') analyzeStock(); });
 
 // ── Analyze ───────────────────────────────────────────
 async function analyzeStock() {
-  const ticker   = document.getElementById('tickerInput').value.trim().toUpperCase();
+  const ticker = document.getElementById('tickerInput').value.trim().toUpperCase();
   const strategy = document.getElementById('strategySelect').value;
 
   if (!ticker) { showErr('Insira um ticker válido.'); return; }
@@ -486,7 +561,6 @@ async function analyzeStock() {
   if (strategy !== 'all') { const el = document.getElementById(`inv-${strategy}`); if(el) el.classList.add('active'); }
 
   try {
-    // 1. Buscar dados do Yahoo via backend
     const quoteRes = await fetch(`/api/quote/${ticker}`);
     if (!quoteRes.ok) {
       const e = await quoteRes.json();
@@ -495,7 +569,6 @@ async function analyzeStock() {
     }
     const indicators = await quoteRes.json();
 
-    // 2. Analisar com Claude via backend
     document.getElementById('loadingMsg').textContent = 'Analisando com IA...';
     const aiRes = await fetch('/api/analyze', {
       method: 'POST',
@@ -527,7 +600,7 @@ function renderResults(ticker, ind, ai) {
   const updn = ind.changePct >= 0 ? 'up' : 'dn';
   const sign = ind.changePct >= 0 ? '+' : '';
   const vCls = ai.veredicto === 'COMPRAR' ? 'comprar' : ai.veredicto === 'VENDER' ? 'vender' : 'aguardar';
-  const sc   = s => s >= 65 ? '#4ade80' : s >= 40 ? '#facc15' : '#f87171';
+  const sc = s => s >= 65 ? '#4ade80' : s >= 40 ? '#facc15' : '#f87171';
 
   function cell(label, val, cls, sub) {
     return `<div class="ind-cell">
@@ -537,14 +610,14 @@ function renderResults(ticker, ind, ai) {
     </div>`;
   }
 
-  const peCls  = !ind.pe ? '' : ind.pe<10 ? 'good' : ind.pe<20 ? 'warn' : 'bad';
-  const pbCls  = !ind.pb ? '' : ind.pb<1  ? 'good' : ind.pb<2  ? 'warn' : 'bad';
+  const peCls = !ind.pe ? '' : ind.pe<10 ? 'good' : ind.pe<20 ? 'warn' : 'bad';
+  const pbCls = !ind.pb ? '' : ind.pb<1 ? 'good' : ind.pb<2 ? 'warn' : 'bad';
   const roeCls = !ind.roe ? '' : ind.roe>20 ? 'good' : ind.roe>10 ? 'warn' : 'bad';
-  const roaCls = !ind.roa ? '' : ind.roa>10 ? 'good' : ind.roa>5  ? 'warn' : 'bad';
-  const dyCls  = !ind.dividendYield ? '' : ind.dividendYield>5 ? 'good' : ind.dividendYield>2 ? 'warn' : 'bad';
-  const deCls  = !ind.debtToEquity  ? '' : ind.debtToEquity<.5 ? 'good' : ind.debtToEquity<1.5 ? 'warn' : 'bad';
-  const mgCls  = !ind.grossMargin   ? '' : ind.grossMargin>30  ? 'good' : ind.grossMargin>15   ? 'warn' : 'bad';
-  const moCls  = !ind.operatingMargin ? '' : ind.operatingMargin>15 ? 'good' : ind.operatingMargin>5 ? 'warn' : 'bad';
+  const roaCls = !ind.roa ? '' : ind.roa>10 ? 'good' : ind.roa>5 ? 'warn' : 'bad';
+  const dyCls = !ind.dividendYield ? '' : ind.dividendYield>5 ? 'good' : ind.dividendYield>2 ? 'warn' : 'bad';
+  const deCls = !ind.debtToEquity ? '' : ind.debtToEquity<.5 ? 'good' : ind.debtToEquity<1.5 ? 'warn' : 'bad';
+  const mgCls = !ind.grossMargin ? '' : ind.grossMargin>30 ? 'good' : ind.grossMargin>15 ? 'warn' : 'bad';
+  const moCls = !ind.operatingMargin ? '' : ind.operatingMargin>15 ? 'good' : ind.operatingMargin>5 ? 'warn' : 'bad';
 
   document.getElementById('results').innerHTML = `
   <div class="result-wrap">
@@ -575,7 +648,7 @@ function renderResults(ticker, ind, ai) {
         ${cell('EPS', ind.eps ? fmt(ind.eps):'—', ind.eps>0?'good':ind.eps?'bad':'', null)}
         ${cell('Market Cap', fmtBig(ind.marketCap), '', null)}
         ${cell('52s Máx.', ind.high52 ? fmt(ind.high52):'—', '', null)}
-        ${cell('52s Mín.', ind.low52  ? fmt(ind.low52) :'—', '', null)}
+        ${cell('52s Mín.', ind.low52 ? fmt(ind.low52) :'—', '', null)}
         ${cell('Alvo Analyst.', ind.targetPrice ? 'R$ '+fmt(ind.targetPrice):'—', '', ind.targetPrice&&ind.price?(ind.targetPrice>ind.price?'↑ Upside':'↓ Downside'):null)}
       </div>
     </div>
@@ -658,7 +731,7 @@ async function sendChat() {
   chatMsgs.push({ role:'user', content: msg });
 
   try {
-    const res  = await fetch('/api/chat', {
+    const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ messages: chatMsgs.slice(-12) })
