@@ -77,20 +77,7 @@ body::after {
 .live-dot { width:5px; height:5px; background: var(--green); border-radius:50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
 
-/* TICKER BAR */
-.ticker-bar {
-  border-bottom: 1px solid var(--border);
-  background: var(--bg2);
-  overflow: hidden; height: 36px;
-  display: flex; align-items: center;
-}
-.ticker-inner {
-  display: flex; gap: 40px;
-  animation: scroll-x 32s linear infinite;
-  white-space: nowrap; padding: 0 30px;
-}
-.ticker-inner:hover { animation-play-state: paused; }
-@keyframes scroll-x { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
 
 .t-item { display:inline-flex; align-items:baseline; gap:7px; flex-shrink:0; }
 .t-name { font-family:var(--mono); font-size:.58rem; letter-spacing:.12em; color:var(--grey); }
@@ -332,9 +319,6 @@ body::after {
   </div>
 </header>
 
-<div class="ticker-bar">
-  <div class="ticker-inner" id="tickerInner"></div>
-</div>
 
 <div class="hero">
   <div class="hero-left">
@@ -468,30 +452,7 @@ INVESTORS.forEach(inv => {
   invGrid.appendChild(d);
 });
 
-// ── Ticker bar (estático — pode conectar ao /api/quote depois) ──
-const TICKERS_STATIC = [
-  { n:'IBOV',     v:'128.450', c:'+0.82%', up:true },
-  { n:'DÓLAR',    v:'R$ 4,97', c:'-0.21%', up:false },
-  { n:'SELIC',    v:'10,75% a.a.', c:'', fl:true },
-  { n:'IFIX',     v:'3.124',   c:'+0.41%', up:true },
-  { n:'SMLL',     v:'2.891',   c:'-0.12%', up:false },
-  { n:'OURO',     v:'R$ 481,90', c:'+1.03%', up:true },
-  { n:'S&P500',   v:'5.218',   c:'+0.34%', up:true },
-  { n:'PETROBRAS',v:'R$ 39,42',c:'+0.55%', up:true },
-  { n:'VALE ON',  v:'R$ 61,80',c:'-1.12%', up:false },
-  { n:'ITAÚ PN',  v:'R$ 37,15',c:'+0.28%', up:true },
-];
 
-function buildTicker() {
-  const inner = document.getElementById('tickerInner');
-  const mk = t => `<span class="t-item">
-    <span class="t-name">${t.n}</span>
-    <span class="t-val">${t.v}</span>
-    ${t.fl ? `<span class="t-chg fl">estável</span>` : `<span class="t-chg ${t.up?'up':'dn'}">${t.c}</span>`}
-  </span>`;
-  inner.innerHTML = TICKERS_STATIC.map(mk).join('') + TICKERS_STATIC.map(mk).join('');
-}
-buildTicker();
 
 // ── Clock ────────────────────────────────────────────
 setInterval(() => {
